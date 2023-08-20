@@ -17,7 +17,7 @@ function setTotalPrice(elementId, price){
     const totalPrice = document.getElementById(elementId);
     totalPrice.innerText = price;
 }
-
+// add to cart
 function addToCart(productName){
     const cardName = document.getElementById('cart');
 
@@ -29,8 +29,8 @@ function addToCart(productName){
 
     cardName.appendChild(p);
 }
-// for buttons
 
+// for buttons
 function getTotalPriceText(elementId){
     const totalPriceElement = document.getElementById(elementId);
     const totalPriceElementString = totalPriceElement.innerText;
