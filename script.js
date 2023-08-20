@@ -1,8 +1,13 @@
-document.getElementById('kitchen-card').addEventListener('click', function(){
-    const priceTextElement = document.getElementById('kitchen-price');
-    const priceTextString = priceTextElement.innerText;
-    const priceText = parseFloat(priceTextString);
-    const fixtPriceText = priceText.toFixed(2)
+// function for card price
+function getCardElemtnt(cardId){
+    const cardPriceText = document.getElementById(cardId);
+    const cardPriceTextString = cardPriceText.innerText;
+    const cardPrice = parseFloat(cardPriceTextString);
 
-    console.log(fixtPriceText)
+    return cardPrice;
+}
+
+document.getElementById('kitchen-card').addEventListener('click', function(){
+    const kitchenCardPrice = getCardElemtnt('kitchen-price');
+    console.log(kitchenCardPrice)
 })
