@@ -61,7 +61,7 @@ function checkFinalTotalPrice(){
     }
     
 }
-
+// discount apply
 document.getElementById('apply-btn').addEventListener('click', function(){
     const couponFeild = document.getElementById('coupon-feild');
     const couponFeildValue = couponFeild.value;
@@ -72,7 +72,6 @@ document.getElementById('apply-btn').addEventListener('click', function(){
 
     const discount = (total * 20) / 100;
     const priceAfterDiscount = total - discount;
-
 
     if(couponFeildValue === 'SELL200'){
         discountText.innerText = discount;
