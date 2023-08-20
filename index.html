@@ -84,7 +84,7 @@
                             </div>
                         </div>
                         <!-- third card -->
-                        <div class="card bg-base-100 shadow-xl">
+                        <div id="kitchen-card2" class="card bg-base-100 shadow-xl">
                             <figure class="py-10 mx-3 mt-3 bg-slate-100">
                                 <img src="./images/prod3.png" alt="" class="rounded-xl" />
                             </figure>
@@ -98,7 +98,7 @@
                                     <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
                                 </div>
                                 <h2 class="card-title my-2">Home Cooker</h2>
-                                <p>49.00 TK</p>
+                                <p><span id="kitchen-price2">49.00</span> TK</p>
                             </div>
                         </div>
                     </div>
@@ -110,7 +110,7 @@
                     </div>
                     <div class="grid gap-7 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                         <!-- first card -->
-                        <div class="card bg-base-100 shadow-xl">
+                        <div id="sports-card" class="card bg-base-100 shadow-xl">
                             <figure class="py-10 mx-3 mt-3 bg-slate-100">
                                 <img src="./images/prod4.png" alt="" class="rounded-xl" />
                             </figure>
@@ -124,11 +124,11 @@
                                     <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
                                 </div>
                                 <h2 class="card-title my-2">Sports Back Cap</h2>
-                                <p>49.00 TK</p>
+                                <p><span id="sports-price">49.00</span> TK</p>
                             </div>
                         </div>
                         <!-- secont card -->
-                        <div class="card bg-base-100 shadow-xl">
+                        <div id="sports-card1" class="card bg-base-100 shadow-xl">
                             <figure class="py-10 mx-3 mt-3 bg-slate-100">
                                 <img src="./images/prod5.png" alt="" class="rounded-xl" />
                             </figure>
@@ -142,11 +142,11 @@
                                     <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
                                 </div>
                                 <h2 class="card-title my-2">Full Jersey Set</h2>
-                                <p>69.00 TK</p>
+                                <p><span id="sports-price1">69.00</span> TK</p>
                             </div>
                         </div>
                         <!-- third card -->
-                        <div class="card bg-base-100 shadow-xl">
+                        <div id="sports-card2" class="card bg-base-100 shadow-xl">
                             <figure class="py-10 mx-3 mt-3 bg-slate-100">
                                 <img src="./images/prod6.png" alt="" class="rounded-xl" />
                             </figure>
@@ -160,7 +160,7 @@
                                     <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
                                 </div>
                                 <h2 class="card-title my-2">Sports cates</h2>
-                                <p>159.00 TK</p>
+                                <p><span id="sports-price2">159.00</span> TK</p>
                             </div>
                         </div>
                     </div>
@@ -176,13 +176,13 @@
                     </div>
                 </div>
                 <div class="bg-base-100 rounded-md shadow-xl px-6 pt-6 mt-5">
-                    <div class="border-b">
+                    <div id="cart" class="border-b font-semibold">
                         
                     </div>
-                    <p class="font-semibold mt-3">Total price: <span id="total-price">00.00</span> TK</p>
+                    <p class="font-semibold mt-3">Total price: <span class="text-gray-400" id="total-price">00.00</span> <span class="text-gray-400">TK</span></p>
                     <p class="font-semibold my-2">Discount:</p>
                     <p class="font-semibold mb-3">Total:</p>
-                    <button class="btn text-white bg-pink-500 w-full -mb-10">Make Purchase</button>
+                    <button id="purchase-btn" class="btn text-white bg-pink-500 w-full -mb-10 " disabled>Make Purchase</button>
                 </div>
             </div>
         </div>
