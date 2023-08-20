@@ -6,8 +6,22 @@ function getCardElemtnt(cardId){
 
     return cardPrice;
 }
-
+// set total price
+function setTotalPrice(elementId, price){
+    const totalPrice = document.getElementById(elementId);
+    totalPrice.innerText = price;
+}
+// cards
 document.getElementById('kitchen-card').addEventListener('click', function(){
     const kitchenCardPrice = getCardElemtnt('kitchen-price');
-    console.log(kitchenCardPrice)
+    const priviousTotalPrice = getCardElemtnt('total-price');
+    const newTotalPrice = priviousTotalPrice + kitchenCardPrice;   
+    setTotalPrice('total-price', newTotalPrice)
+})
+
+document.getElementById('kitchen-card1').addEventListener('click', function(){
+    const kitchenCardPrice = getCardElemtnt('kitchen-price1');
+    const priviousTotalPrice = getCardElemtnt('total-price');
+    const newTotalPrice = priviousTotalPrice + kitchenCardPrice; 
+    setTotalPrice('total-price', newTotalPrice);
 })
