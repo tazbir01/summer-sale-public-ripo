@@ -29,12 +29,26 @@ function addToCart(productName){
 
     cardName.appendChild(p);
 }
+// for buttons
 
-function checkPrice(){
-    let totalPrice = document.getCardElemtnt('total-price')
-    const purchaseButton = getElementById('purchase-btn')
-    
-    console.log(totalPrice)
+function getTotalPriceText(elementId){
+    const totalPriceElement = document.getElementById(elementId);
+    const totalPriceElementString = totalPriceElement.innerText;
+    const totalPriceValue = parseFloat(totalPriceElementString.split('.')[0]);
+    console.log(totalPriceValue)
+    return totalPriceValue;
+
+}
+
+function checkTotalPrice(){
+    const purchaseButton = document.getElementById('purchase-btn');
+    const totalPrice = getTotalPriceText('total-price');
+
+    if (totalPrice > 0) {
+        purchaseButton.removeAttribute('disabled');
+    } else {
+        purchaseButton.disabled = true;
+    }
 }
 // cards
 document.getElementById('kitchen-card').addEventListener('click', function(){
@@ -43,6 +57,8 @@ document.getElementById('kitchen-card').addEventListener('click', function(){
     setTotalPrice('total-price', newTotalPrice)
 
     addToCart('K. Accessories')
+
+    checkTotalPrice()
 })
 
 document.getElementById('kitchen-card1').addEventListener('click', function(){
