@@ -39,7 +39,7 @@ function getTotalPriceText(elementId){
     const totalPriceElement = document.getElementById(elementId);
     const totalPriceElementString = totalPriceElement.innerText;
     const totalPriceValue = parseFloat(totalPriceElementString.split('.')[0]);
-    console.log(totalPriceValue)
+    
     return totalPriceValue;
 }
 
@@ -56,15 +56,33 @@ function checkFinalTotalPrice(){
     const applyButton = document.getElementById('apply-btn');
     const totalPrice = getTotalPriceText('total-price');
 
-    
-
     if (totalPrice >= 200) {
         applyButton.removeAttribute('disabled');
-        
-        
     }
     
 }
+
+document.getElementById('apply-btn').addEventListener('click', function(){
+    const couponFeild = document.getElementById('coupon-feild');
+    const couponFeildValue = couponFeild.value;
+
+    const discountText = document.getElementById('discount');
+
+    const total = getTotalPriceText('total-price');
+
+    const discount = (total * 20) / 100;
+    const priceAfterDiscount = total - discount;
+
+
+    if(couponFeildValue === 'SELL200'){
+        discountText.innerText = discount;
+        setTotalPrice('total', priceAfterDiscount)
+    }
+    else{
+        alert('Please Enter Your Coupon')
+    }
+})
+
 // cards
 document.getElementById('kitchen-card').addEventListener('click', function(){
     const kitchenCardPrice = getCardElemtnt('kitchen-price');
