@@ -18,6 +18,10 @@ function setTotalPrice(elementId, price){
     totalPrice.innerText = price;
 }
 
+// function setTotal(elementId, price)(
+
+// )
+
 function addToCart(productName){
     const cardName = document.getElementById('cart');
 
@@ -37,7 +41,6 @@ function getTotalPriceText(elementId){
     const totalPriceValue = parseFloat(totalPriceElementString.split('.')[0]);
     console.log(totalPriceValue)
     return totalPriceValue;
-
 }
 
 function checkTotalPrice(){
@@ -46,56 +49,92 @@ function checkTotalPrice(){
 
     if (totalPrice > 0) {
         purchaseButton.removeAttribute('disabled');
-    } else {
-        purchaseButton.disabled = true;
     }
+}
+
+function checkFinalTotalPrice(){
+    const applyButton = document.getElementById('apply-btn');
+    const totalPrice = getTotalPriceText('total-price');
+
+    
+
+    if (totalPrice >= 200) {
+        applyButton.removeAttribute('disabled');
+        
+        
+    }
+    
 }
 // cards
 document.getElementById('kitchen-card').addEventListener('click', function(){
     const kitchenCardPrice = getCardElemtnt('kitchen-price');
     const newTotalPrice = newPrice(kitchenCardPrice);   
-    setTotalPrice('total-price', newTotalPrice)
+    setTotalPrice('total-price', newTotalPrice);
+    setTotalPrice('total', newTotalPrice);
 
     addToCart('K. Accessories')
 
     checkTotalPrice()
+    checkFinalTotalPrice()
 })
 
 document.getElementById('kitchen-card1').addEventListener('click', function(){
     const kitchenCardPrice = getCardElemtnt('kitchen-price1');
     const newTotalPrice = newPrice(kitchenCardPrice);
     setTotalPrice('total-price', newTotalPrice);
-
+    setTotalPrice('total', newTotalPrice);
+    
     addToCart('K. Accessories')
+
+    checkTotalPrice()
+    checkFinalTotalPrice()
 })
 
 document.getElementById('kitchen-card2').addEventListener('click', function(){
     const kitchenCardPrice = getCardElemtnt('kitchen-price2');
     const newTotalPrice = newPrice(kitchenCardPrice);
     setTotalPrice('total-price', newTotalPrice);
+    setTotalPrice('total', newTotalPrice);
 
     addToCart('Home Cooker') 
+
+    checkTotalPrice()
+    checkFinalTotalPrice()
 })
 
 document.getElementById('sports-card').addEventListener('click', function(){
     const kitchenCardPrice = getCardElemtnt('sports-price');
     const newTotalPrice = newPrice(kitchenCardPrice); 
     setTotalPrice('total-price', newTotalPrice);
+    setTotalPrice('total', newTotalPrice);
 
     addToCart('Sports Back Cap') 
+
+    checkTotalPrice()
+    checkFinalTotalPrice()
 })
+
 document.getElementById('sports-card1').addEventListener('click', function(){
     const kitchenCardPrice = getCardElemtnt('sports-price1');
     const newTotalPrice = newPrice(kitchenCardPrice); 
     setTotalPrice('total-price', newTotalPrice);
+    setTotalPrice('total', newTotalPrice);
 
     addToCart('Full Jersey Set') 
+
+    checkTotalPrice()
+    checkFinalTotalPrice()
 })
+
 document.getElementById('sports-card2').addEventListener('click', function(){
     const kitchenCardPrice = getCardElemtnt('sports-price2');
     const newTotalPrice = newPrice(kitchenCardPrice); 
     setTotalPrice('total-price', newTotalPrice);
+    setTotalPrice('total', newTotalPrice);
 
     addToCart('Sports cates') 
+
+    checkTotalPrice()
+    checkFinalTotalPrice()
 })
 
