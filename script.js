@@ -18,10 +18,6 @@ function setTotalPrice(elementId, price){
     totalPrice.innerText = price;
 }
 
-// function setTotal(elementId, price)(
-
-// )
-
 function addToCart(productName){
     const cardName = document.getElementById('cart');
 
@@ -153,5 +149,10 @@ document.getElementById('sports-card2').addEventListener('click', function(){
 
     checkTotalPrice()
     checkFinalTotalPrice()
+})
+
+// go home
+document.getElementById('go-home').addEventListener('click', function(){
+    window.location.href = 'index.html';
 })
 
